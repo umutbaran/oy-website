@@ -145,10 +145,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Custom Cursor Logic
     const dot = document.querySelector('.cursor-dot');
     const outline = document.querySelector('.cursor-outline');
+    const heroImg1 = document.querySelector('.hero-img-1');
+    const heroImg2 = document.querySelector('.hero-img-2');
 
     window.addEventListener('mousemove', (e) => {
         const posX = e.clientX;
         const posY = e.clientY;
+        const width = window.innerWidth;
+        const ratio = posX / width;
 
         // Instant dot position
         dot.style.left = `${posX}px`;
@@ -159,6 +163,28 @@ document.addEventListener('DOMContentLoaded', () => {
             left: `${posX}px`,
             top: `${posY}px`
         }, { duration: 500, fill: "forwards" });
+
+        // Stereoscopic 3D Parallax Effect (Dual Axis)
+        if (heroImg1 && heroImg2) {
+            const height = window.innerHeight;
+            const ratioY = posY / height;
+
+            // Blending (X-axis dependent)
+            heroImg2.style.opacity = ratio;
+            heroImg1.style.opacity = 1 - ratio;
+
+            // Multi-axis translation for deep 3D feel
+            const rangeX = 50; // Horizontal range
+            const rangeY = 30; // Vertical range
+            
+            const shiftX1 = -ratio * rangeX;
+            const shiftX2 = (1 - ratio) * rangeX;
+            
+            const shiftY = (ratioY - 0.5) * rangeY; // Vertical shift same for both to tilt the world
+
+            heroImg1.style.transform = `scale(1.15) translateX(${shiftX1}px) translateY(${-shiftY}px)`;
+            heroImg2.style.transform = `scale(1.15) translateX(${shiftX2}px) translateY(${-shiftY}px)`;
+        }
     });
 
     // Cursor Interactions
