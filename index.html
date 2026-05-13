@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oğuz Yıldırım | Designer Portfolio</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-lang="tr">
+
+    <!-- NAVIGATION -->
+    <header class="navbar">
+        <div class="container nav-flex">
+            <a href="#home" class="brand-signature">Oğuz Yıldırım</a>
+            <nav class="desktop-nav">
+                <ul class="nav-links">
+                    <li><a href="#home" data-i18n="nav-home">Home</a></li>
+                    <li><a href="#portfolio" data-i18n="nav-portfolio">Portfolio</a></li>
+                    <li><a href="#projects" data-i18n="nav-projects">Projects</a></li>
+                    <li><a href="#contact" data-i18n="nav-contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-right">
+                <div class="lang-switcher">
+                    <button onclick="setLang('tr')" id="btn-tr" class="active">TR</button>
+                    <button onclick="setLang('en')" id="btn-en">EN</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION: Cinematic Architecture -->
+        <section id="home" class="hero-page reveal">
+            <div class="hero-bg">
+                <img src="assets/images/9018102f-0081-41f5-a07c-d03694942acd.JPG" alt="Architectural Masterpiece">
+            </div>
+            <div class="container">
+                <div class="hero-text">
+                    <h1 data-i18n="home-title">Form. Space. <span>Identity.</span></h1>
+                    <p class="hero-desc" data-i18n="home-desc">Architecting silence through precise geometries and material honesty. Shaping the future of living through conceptual excellence.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- PORTFOLIO SECTION: The Collective Archive -->
+        <section id="portfolio" class="page-section portfolio-page">
+            <div class="container">
+                <div class="section-title-wrap reveal">
+                    <span class="section-label">Project Inventory</span>
+                    <h2 class="section-title">The Portfolio.</h2>
+                </div>
+
+                <div class="gallery-grid reveal">
+                    <div class="gallery-item">
+                        <img src="assets/images/86b1485a-3e9c-4b7a-b242-a4dbb3ae690b.JPG" alt="Perspective">
+                        <div class="gallery-caption">Perspective / Interior Pathway Dynamics</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/images/WhatsApp%20Image%202026-04-30%20at%2018.35.12.jpeg" alt="Material Palette">
+                        <div class="gallery-caption">Curation / Comprehensive Material Palette</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/images/WhatsApp%20Image%202026-04-30%20at%2018.36.09.jpeg" alt="Presentation">
+                        <div class="gallery-caption">Presentation / Bandır Project Concept Board</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/images/WhatsApp%20Image%202026-04-30%20at%2018.37.28adsda.jpeg" alt="Technical Drawing">
+                        <div class="gallery-caption">Technical / Glass Floor Plant Path Detail</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/images/WhatsApp%20Image%202026-04-30%20at%2018.40.15asda.jpeg" alt="Technical Drawing">
+                        <div class="gallery-caption">Engineering / Steel Shelving System Drawing</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/images/7fdc77f9-1016-49f5-9eab-a8ca085d36ce.JPG" alt="Render">
+                        <div class="gallery-caption">Institutional / Geometric Dome Concept</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/images/2852549d-170e-49be-85e7-3286b0655308.JPG" alt="Render">
+                        <div class="gallery-caption">Residential / Warm Timber & Spatial Depth</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/images/9018102f-0081-41f5-a07c-d03694942acd.JPG" alt="Render">
+                        <div class="gallery-caption">Architectural / Glass Sphere Integration</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/images/e1c6449b-046c-4ead-9d0b-a24353a32819.jpg" alt="Render">
+                        <div class="gallery-caption">Hospitality / Bandır Exterior Identity</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTORS / PROJECTS: High-Fidelity Gallery -->
+        <section id="projects" class="page-section projects-page">
+            <div class="container">
+                <div class="section-title-wrap reveal">
+                    <span class="section-label">Selected Portfolio (40 Points Focus)</span>
+                    <h2 class="section-title">Design Works.</h2>
+                </div>
+                
+                <div class="sector-list">
+                    <a href="#" class="sector-item reveal">
+                        <div class="sector-info">
+                            <h3>01. Gesan Headquarters</h3>
+                            <p>Commercial / Workplace Design</p>
+                            <small>Advanced Lumion High-Fidelity Rendering. Strategic planning of circular spatial geometries and natural light optimization. Focused on creating a prestigious corporate identity through material honesty.</small>
+                        </div>
+                        <div class="sector-img">
+                            <img src="assets/images/gesan%20renderlar_13%20-%20Photo.JPEG" alt="Gesan Office High-Fidelity">
+                        </div>
+                    </a>
+                    <a href="#" class="sector-item reveal">
+                        <div class="sector-info">
+                            <h3>02. Minimalist Living</h3>
+                            <p>Residential / Interior Concept</p>
+                            <small>Warm timber textures meet ambient light design. A study in minimalist spatial depth and material honesty, creating a serene residential sanctuary.</small>
+                        </div>
+                        <div class="sector-img">
+                            <img src="assets/images/7fdc77f9-1016-49f5-9eab-a8ca085d36ce.JPG" alt="Minimalist Living Concept">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION: Connectivity -->
+        <section id="contact" class="page-section contact-page">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info reveal">
+                        <h2 data-i18n="nav-contact">CONTACT.</h2>
+                        <div class="social-mini">
+                            <a href="mailto:oguzyldrm8@gmail.com"><i class="fas fa-envelope"></i></a>
+                            <a href="tel:05488305255"><i class="fas fa-phone"></i></a>
+                        </div>
+                    </div>
+                    <form id="contact-form" class="contact-form reveal">
+                        <div class="form-group">
+                            <input type="text" id="name" required placeholder=" ">
+                            <label data-i18n="label-name">Full Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" required placeholder=" ">
+                            <label data-i18n="label-email">Electronic Mail</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" rows="4" required placeholder=" "></textarea>
+                            <label data-i18n="label-message">Inquiry Details</label>
+                        </div>
+                        <button type="submit" class="btn-premium" data-i18n="btn-submit">Initiate Contact</button>
+                        <div id="feedback-msg" class="feedback-toast hidden" data-i18n="feedback-msg">Acknowledgment Received.</div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-flex">
+                <div class="footer-logo">Oğuz Yıldırım.</div>
+                <div class="footer-copy">
+                    &copy; 2026. Architecting Digital Elegance.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
