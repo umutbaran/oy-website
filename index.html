@@ -18,12 +18,13 @@
     <!-- NAVIGATION -->
     <header class="navbar">
         <div class="container nav-flex">
-            <a href="#home" class="brand-signature">Oğuz Yıldırım</a>
+            <a href="#home" class="brand-signature" data-i18n="brand-name">Oğuz Yıldırım</a>
             <nav class="desktop-nav">
                 <ul class="nav-links">
                     <li><a href="#home" data-i18n="nav-home">Home</a></li>
                     <li><a href="#portfolio" data-i18n="nav-portfolio">Portfolio</a></li>
                     <li><a href="#projects" data-i18n="nav-projects">Projects</a></li>
+                    <li><a href="#cv" data-i18n="nav-cv">CV</a></li>
                     <li><a href="#contact" data-i18n="nav-contact">Contact</a></li>
                 </ul>
             </nav>
@@ -70,7 +71,7 @@
                     </div>
                     <div class="gallery-item">
                         <img src="assets/images/WhatsApp%20Image%202026-04-30%20at%2018.36.09.jpeg" alt="Presentation">
-                        <div class="gallery-caption">Presentation / Bandır Project Concept Board</div>
+                        <div class="gallery-caption">Presentation / Bathroom Concept Board</div>
                     </div>
                     <div class="gallery-item">
                         <img src="assets/images/WhatsApp%20Image%202026-04-30%20at%2018.37.28adsda.jpeg" alt="Technical Drawing">
@@ -94,7 +95,7 @@
                     </div>
                     <div class="gallery-item">
                         <img src="assets/images/e1c6449b-046c-4ead-9d0b-a24353a32819.jpg" alt="Render">
-                        <div class="gallery-caption">Hospitality / Bandır Exterior Identity</div>
+                        <div class="gallery-caption">Interior / Contemporary Bathroom Design</div>
                     </div>
                 </div>
             </div>
@@ -133,6 +134,28 @@
             </div>
         </section>
 
+        <!-- CV SECTION: Professional Trajectory -->
+        <section id="cv" class="page-section cv-page">
+            <div class="container">
+                <div class="section-title-wrap reveal">
+                    <span class="section-label" data-i18n="cv-label">Professional Trajectory</span>
+                    <h2 class="section-title" data-i18n="cv-title">Curriculum.</h2>
+                </div>
+                
+                <div class="cv-display-container reveal">
+                    <div class="cv-preview">
+                        <img src="assets/images/cv.jpg" alt="Oğuz Yıldırım CV" class="cv-img">
+                        <div class="cv-overlay">
+                            <a href="assets/images/cv.jpg" download="Oguz_Yildirim_CV.jpg" class="btn-premium">
+                                <i class="fas fa-download"></i> 
+                                <span data-i18n="btn-download">Download Full CV</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- CONTACT SECTION: Connectivity -->
         <section id="contact" class="page-section contact-page">
             <div class="container">
@@ -165,12 +188,43 @@
         </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer reveal">
         <div class="container">
-            <div class="footer-flex">
-                <div class="footer-logo">Oğuz Yıldırım.</div>
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="footer-logo" data-i18n="brand-name">Oğuz Yıldırım</div>
+                    <p class="footer-tagline" data-i18n="footer-tagline">Architecting silence through precise geometries.</p>
+                </div>
+                <div class="footer-nav">
+                    <div class="footer-nav-col">
+                        <h4 data-i18n="footer-nav-title">Navigation</h4>
+                        <ul>
+                            <li><a href="#home" data-i18n="nav-home">Home</a></li>
+                            <li><a href="#portfolio" data-i18n="nav-portfolio">Portfolio</a></li>
+                            <li><a href="#projects" data-i18n="nav-projects">Projects</a></li>
+                            <li><a href="#cv" data-i18n="nav-cv">CV</a></li>
+                            <li><a href="#contact" data-i18n="nav-contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-nav-col">
+                        <h4 data-i18n="footer-social-title">Connect</h4>
+                        <ul>
+                            <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+                            <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+                            <li><a href="https://behance.net" target="_blank">Behance</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
                 <div class="footer-copy">
-                    &copy; 2026. Architecting Digital Elegance.
+                    &copy; 2026. <span data-i18n="footer-copy-text">All rights reserved. Designed with precision.</span>
+                </div>
+                <div class="footer-extra">
+                    <a href="#home" class="back-to-top">
+                        <i class="fas fa-arrow-up"></i>
+                        <span data-i18n="back-to-top">Back to Top</span>
+                    </a>
                 </div>
             </div>
         </div>

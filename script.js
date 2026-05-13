@@ -15,7 +15,17 @@ const langData = {
         "btn-submit": "İletişimi Başlat",
         "feedback-msg": "Onay Alındı.",
         "home-title": "Form. Space. <span>Identity.</span>",
-        "home-desc": "Hassas geometriler ve malzeme dürüstlüğü ile sessizliği mimariyle buluşturuyoruz. Kavramsal mükemmeliyetle yaşamın geleceğini şekillendiriyoruz."
+        "home-desc": "Hassas geometriler ve malzeme dürüstlüğü ile sessizliği mimariyle buluşturuyoruz. Kavramsal mükemmeliyetle yaşamın geleceğini şekillendiriyoruz.",
+        "brand-name": "Oğuz Yıldırım",
+        "footer-tagline": "Hassas geometrilerle sessizliği tasarlıyoruz.",
+        "footer-nav-title": "Navigasyon",
+        "footer-social-title": "Bağlantılar",
+        "footer-copy-text": "Tüm hakları saklıdır. Hassasiyetle tasarlandı.",
+        "back-to-top": "Başa Dön",
+        "nav-cv": "CV",
+        "cv-label": "Mesleki Geçmiş",
+        "cv-title": "Özgeçmiş.",
+        "btn-download": "Tam CV'yi İndir"
     },
     en: {
         "nav-home": "Genesis",
@@ -28,12 +38,24 @@ const langData = {
         "btn-submit": "Initiate Contact",
         "feedback-msg": "Acknowledgment Received.",
         "home-title": "Form. Space. <span>Identity.</span>",
-        "home-desc": "Architecting silence through precise geometries and material honesty. Shaping the future of living through conceptual excellence."
+        "home-desc": "Architecting silence through precise geometries and material honesty. Shaping the future of living through conceptual excellence.",
+        "brand-name": "Oguz Yildirim",
+        "footer-tagline": "Architecting silence through precise geometries.",
+        "footer-nav-title": "Navigation",
+        "footer-social-title": "Connect",
+        "footer-copy-text": "All rights reserved. Designed with precision.",
+        "back-to-top": "Back to Top",
+        "nav-cv": "CV",
+        "cv-label": "Professional Trajectory",
+        "cv-title": "Curriculum.",
+        "btn-download": "Download Full CV"
     }
 };
 
 function setLang(lang) {
     document.body.setAttribute('data-lang', lang);
+    document.documentElement.lang = lang; // Fix for Turkish character uppercase issues
+    
     document.getElementById('btn-tr').classList.toggle('active', lang === 'tr');
     document.getElementById('btn-en').classList.toggle('active', lang === 'en');
 
@@ -43,17 +65,6 @@ function setLang(lang) {
             el.innerHTML = langData[lang][key];
         }
     });
-    
-    // Professional touch: Handle name localization if needed (stripping special characters for EN)
-    const logo = document.querySelector('.brand-signature');
-    const footerLogo = document.querySelector('.footer-logo');
-    if (lang === 'en') {
-        if (logo) logo.textContent = "Oguz Yildirim";
-        if (footerLogo) footerLogo.textContent = "Oguz Yildirim.";
-    } else {
-        if (logo) logo.textContent = "Oğuz Yıldırım";
-        if (footerLogo) footerLogo.textContent = "Oğuz Yıldırım.";
-    }
 
     localStorage.setItem('portfolio_lang', lang);
 }
