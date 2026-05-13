@@ -119,4 +119,56 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => feedbackMsg.classList.add('hidden'), 5000);
         });
     }
+
+    // Mobile Menu Toggle Logic
+    const menuToggle = document.getElementById('menu-toggle');
+    const desktopNav = document.querySelector('.desktop-nav');
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    if (menuToggle) {
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            desktopNav.classList.toggle('active');
+            document.body.classList.toggle('no-scroll');
+        });
+    }
+
+    // Close menu when a link is clicked
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            menuToggle.classList.remove('active');
+            desktopNav.classList.remove('active');
+            document.body.classList.remove('no-scroll');
+        });
+    });
+
+    // Custom Cursor Logic
+    const dot = document.querySelector('.cursor-dot');
+    const outline = document.querySelector('.cursor-outline');
+
+    window.addEventListener('mousemove', (e) => {
+        const posX = e.clientX;
+        const posY = e.clientY;
+
+        // Instant dot position
+        dot.style.left = `${posX}px`;
+        dot.style.top = `${posY}px`;
+
+        // Smooth trailing outline
+        outline.animate({
+            left: `${posX}px`,
+            top: `${posY}px`
+        }, { duration: 500, fill: "forwards" });
+    });
+
+    // Cursor Interactions
+    const clickables = document.querySelectorAll('a, button, .gallery-item, .sector-item, .cv-preview');
+    clickables.forEach(el => {
+        el.addEventListener('mouseenter', () => {
+            document.body.classList.add('cursor-active');
+        });
+        el.addEventListener('mouseleave', () => {
+            document.body.classList.remove('cursor-active');
+        });
+    });
 });
